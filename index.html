@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+    background-color:gray
+}
+.Button{
+    width: 200px;
+    color: white;
+    height: 40px;
+    background-color: red;
+    border-radius: 10px;
+}
+.text{
+    size: 200px;
+    font-size: 30px;
+}
+</style>
+<body>
+   <center><div>
+    <div>
+        <img src="dic-3.png" alt=""  class="img">
+         </div>
+    <div>
+      <h1 class="num">3</h1>
+    </div>
+    <div>
+        <button class="Button" onclick="roll()">Button</button>
+    </div>
+   </div></center>
+</body>
+<script>
+   function roll(){
+    let img = document.querySelector(".img");
+        let rnd = Math.random() * 6 + 1;
+        let nodec = Math.trunc(rnd);
+        document.querySelector(".num").textContent = nodec;
+        img.src=`dic-${nodec}.png`
+    }
+</script>
+</html>
